@@ -1,0 +1,42 @@
+@use "reset";
+
+.container {
+  margin: 0 auto;
+  width: 768px;
+  max-width: 100%;
+  @media (max-width: 767px) {
+    padding: 0 10px;
+  }
+}
+
+.brands {
+  display: flex;
+  width: 100%;
+  &__wrap {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+  }
+  &__item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2px;
+  }
+
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 20px;
+    &__wrap {
+      padding: 20px 0;
+    }
+    &__item {
+      flex: auto;
+      width: calc(33.33% - 6.66px);
+    }
+  }
+}
